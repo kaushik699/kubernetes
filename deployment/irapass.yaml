@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: irapass-pod
+spec:
+  containers:
+    - name: irapass
+      image: kaushik699/irapass:6
+      volumeMounts:
+        - name: conf-volume
+          mountPath: /usr/local/epi/conf  # Inside the container
+  volumes:
+    - name: conf-volume
+      persistentVolumeClaim:
+        claimName: conf-files-pvc
