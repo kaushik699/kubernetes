@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: irapass-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: irapodwatcher
+  template:
+    metadata:
+      labels:
+        app: irapodwatcher
+    spec:
+      containers:
+        - name: irapodwatcher
+          image: kaushik699/irapodwatcher:6
+          volumeMounts:
+            - name: conf-volume
+              mountPath: /usr/local/epi/conf
+      volumes:
+        - name: conf-volume
+          persistentVolumeClaim:
+            claimName: iracluster-conf-files-pvc
