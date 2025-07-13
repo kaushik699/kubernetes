@@ -13,7 +13,7 @@ spec:
         app: irapass
     spec:
       containers:
-        - name: irapodtracker
+        - name: irapass
           image: kaushik699/irapass:6
           volumeMounts:
             - name: conf-volume
