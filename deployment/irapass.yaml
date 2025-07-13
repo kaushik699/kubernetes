@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: irapass
-          image: kaushik699/irapass:8
+          image: kaushik699/irapass:9
           volumeMounts:
             - name: conf-volume
               mountPath: /usr/local/epi/conf
