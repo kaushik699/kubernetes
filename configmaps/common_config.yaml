@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: common-config
+data:
+  common_config.json: |
+    {
+      "cluster_id":"<cluster_id>",
+      "app_detailed_log": true,
+      "app_log_level": "info",
+      "enable_log": true,
+      "nats_conf": {
+        "nats_public_key": "<nats_public_key>",
+        "nats_seed_key": "<nats_seed_key>",
+        "sys_nats_public_key": "<sys_nats_public_key>",
+        "sys_nats_seed_key": "<sys_nats_seed_key>",
+        "nats_url": "nats://<IP>:4222"
+      },
+      "max_dial_ports": 1000,
+      "cpa_init_tone": "tone_stream://%(1,0,1)"
+    }
