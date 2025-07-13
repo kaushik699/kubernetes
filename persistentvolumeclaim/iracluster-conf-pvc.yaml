@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: iracluster-conf-files-pvc
 spec:
+  storageClassName: ""  # <----- Must be empty to match static PV
   accessModes:
     - ReadWriteOnce
   resources:
