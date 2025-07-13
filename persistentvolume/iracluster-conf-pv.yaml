@@ -6,6 +6,6 @@ spec:
   capacity:
     storage: 1Gi
   accessModes:
-    - ReadOnlyMany  # Or ReadWriteMany if you want it to be writable
+    - ReadWriteOnce # Or ReadWriteMany if you want it to be writable
   hostPath:
     path: /usr/local/epi/conf
