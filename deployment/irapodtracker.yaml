@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: irapodtracker
-          image: kaushik699/irapodtracker:10
+          image: kaushik699/irapodtracker:11
           volumeMounts:
             - name: conf-volume
               mountPath: /usr/local/epi/conf
